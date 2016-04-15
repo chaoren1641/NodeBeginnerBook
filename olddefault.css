@@ -12,6 +12,18 @@ body {
     border: 0;
 }
 
+#ibookstore-banner {
+    display: none;
+    margin: -10px;
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+    #ibookstore-banner {
+        display: block;
+    }
+}
+
 #book, #disqus_thread, #footer {
     width: 640px;
     margin: 0 auto;
@@ -61,10 +73,6 @@ body {
     margin-right: auto;
     width: 704px;
     background-color: #555;
-}
-
-#translations {
-    width: 900px;
 }
 
 #translations table {
@@ -148,11 +156,6 @@ body {
 }
 
 .buy-the-bundle strong.price.dollarsign {
-    font-weight: normal;
-}
-
-.price sup {
-    font-size: 10pt;
     font-weight: normal;
 }
 
@@ -303,34 +306,8 @@ h2, h3, h4, h5 {
 	font-family: "Helvetica Neue", sans-serif;
 }
 
-#salespitch .bundle-book {
-    overflow: hidden;
-}
-
-#salespitch .bundle-book-image {
-    width: 100px;
-    float: left;
-}
-
-#salespitch .bundle-book-image img {
-    box-shadow: 2px 2px 1px #bbb;
-}
-
-#salespitch .bundle-book-text {
-    overflow: hidden;
-}
-
-#salespitch .bundle-book-connection {
-    text-align: center;
-    font-size: 36pt;
-    font-weight: bolder;
-    color: #6b6;
-    margin-top: -16px;
-    margin-bottom: 8px;
-}
-
 #authorimage {
-  float: right;
+	float: right;
   padding-left: 32px;
   padding-bottom: 4px;
 }
@@ -347,11 +324,6 @@ h2, h3, h4, h5 {
 #salespitch .box .subinfo {
 	font-size: 10pt;
 	color: #777;
-}
-
-#salespitch .box .subinfo strong {
-    font-size: 14pt;
-    color: #080;
 }
 
 #bubble {
@@ -400,16 +372,12 @@ pre.prettyprint {
     font-size: 14px;
 }
 
-#book div ul {
+#book ul {
     margin-top: -24px;
-    margin-bottom: 48px;
+    margin-bottom: 64px;
 }
 
-#salespitch div ul {
-    margin-top: 22px;
-}
-
-#book div ul li {
+ul li {
     margin-bottom: 12px;
     font-size: 110%;
 }
@@ -483,7 +451,44 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {
     }
 }
 
-@media only print {
+@media only screen and (max-width: 1024px) {
+    body {
+        font-size: 165%;
+        background-color: #fff;
+    }
+
+    h1 {
+        font-size: 250%;
+        margin-left: -33px;
+    }
+
+    #book, #disqus_thread, #footer {
+        width: 90%;
+        max-width: 90%;
+        padding: 32px;
+        box-shadow: none;
+        border: none;
+    }
+
+    .buy-the-bundle, #forkmeongithub, #praise {
+        display: none;
+    }
+
+    #translations {
+        display: none;
+    }
+    
+    #translations td {
+        text-align: center;
+    }
+
+    #translations img {
+        display: none;
+    }
+}
+
+
+@media only print {            
     #book {
         margin-top: 60px;
     }

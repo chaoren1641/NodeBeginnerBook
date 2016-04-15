@@ -1,5 +1,6 @@
 body {
-    font-family: Georgia, serif;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 14px;
     background-color: #eee;
     padding-top: 0px;
 }
@@ -10,6 +11,18 @@ body {
     top: 0;
     right: 0;
     border: 0;
+}
+
+#ibookstore-banner {
+    display: none;
+    margin: -10px;
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+    #ibookstore-banner {
+        display: block;
+    }
 }
 
 #book, #disqus_thread, #footer {
@@ -32,7 +45,7 @@ body {
 }
 
 #author {
-    margin-top: -36px;
+    margin-top: 36px;
     margin-left: 279px;
     color: #888;
     font-family: "Helvetica Neue", sans-serif;
@@ -61,10 +74,6 @@ body {
     margin-right: auto;
     width: 704px;
     background-color: #555;
-}
-
-#translations {
-    width: 900px;
 }
 
 #translations table {
@@ -151,11 +160,6 @@ body {
     font-weight: normal;
 }
 
-.price sup {
-    font-size: 10pt;
-    font-weight: normal;
-}
-
 .buy-the-bundle .buy {
     display: table-cell;
     vertical-align: top;
@@ -231,7 +235,7 @@ body {
 }
 
 #praise .praise {
-    margin-bottom: 25px;
+    margin-bottom: 12px;
 }
 
 #praise .author {
@@ -260,12 +264,12 @@ body {
     padding-left: 24px;
     margin-top: 12px;
     margin-left: 0;
-    margin-bottom: 36px;
+    margin-bottom: 12px;
 }
 
 h1 {
-    margin-left: -63px;
-    margin-top: -109px;
+    /*margin-left: -63px;*/
+    margin: -139px auto 0;
     font-size: 300%;
     color: #700;
     font-style: italic;
@@ -303,34 +307,8 @@ h2, h3, h4, h5 {
 	font-family: "Helvetica Neue", sans-serif;
 }
 
-#salespitch .bundle-book {
-    overflow: hidden;
-}
-
-#salespitch .bundle-book-image {
-    width: 100px;
-    float: left;
-}
-
-#salespitch .bundle-book-image img {
-    box-shadow: 2px 2px 1px #bbb;
-}
-
-#salespitch .bundle-book-text {
-    overflow: hidden;
-}
-
-#salespitch .bundle-book-connection {
-    text-align: center;
-    font-size: 36pt;
-    font-weight: bolder;
-    color: #6b6;
-    margin-top: -16px;
-    margin-bottom: 8px;
-}
-
 #authorimage {
-  float: right;
+	float: right;
   padding-left: 32px;
   padding-bottom: 4px;
 }
@@ -349,18 +327,13 @@ h2, h3, h4, h5 {
 	color: #777;
 }
 
-#salespitch .box .subinfo strong {
-    font-size: 14pt;
-    color: #080;
-}
-
 #bubble {
 	width: 580px;
 	border: 1px solid #999;
 	border-radius: 16px;
 	padding: 32px;
 	background-color: #ffe;
-	margin-bottom: 60px;
+	margin-bottom: 20px;
 }
 
 #salespitch .orbox {
@@ -376,18 +349,17 @@ h2, h3, h4, h5 {
 
 #book p {
     text-align: justify;
-    font-size: 110%;
-    line-height: 150%;
-    margin-bottom: 48px;
-    margin-top: -22px;
+    line-height: 120%;
+    margin-bottom: 12px;
+    margin-top: 12px;
 }
 
 pre {
     background-color: #f7f7f7;
     border: 1px solid #eee;
     padding: 16px;
-    margin-bottom: 64px;
-    margin-top: -24px;
+    margin-bottom: 12px;
+    margin-top: 12px;
     font-size: 14px;
 }
 
@@ -395,23 +367,19 @@ pre.prettyprint {
     background-color: #f7f7f7;
     border: 1px solid #eee;
     padding: 16px;
-    margin-bottom: 64px;
-    margin-top: -24px;
-    font-size: 14px;
-}
-
-#book div ul {
-    margin-top: -24px;
-    margin-bottom: 48px;
-}
-
-#salespitch div ul {
-    margin-top: 22px;
-}
-
-#book div ul li {
     margin-bottom: 12px;
-    font-size: 110%;
+    margin-top: 12px;
+    font-size: 14px;
+	font-family: Lucida Console,Courier,monospace
+}
+
+#book ul {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+ul li {
+    margin-bottom: 12px;
 }
 
 blockquote {
@@ -483,7 +451,44 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {
     }
 }
 
-@media only print {
+@media only screen and (max-width: 1024px) {
+    body {
+        font-size: 165%;
+        background-color: #fff;
+    }
+
+    h1 {
+        font-size: 250%;
+        margin-left: -33px;
+    }
+
+    #book, #disqus_thread, #footer {
+        width: 90%;
+        max-width: 90%;
+        padding: 32px;
+        box-shadow: none;
+        border: none;
+    }
+
+    .buy-the-bundle, #forkmeongithub, #praise {
+        display: none;
+    }
+
+    #translations {
+        display: none;
+    }
+    
+    #translations td {
+        text-align: center;
+    }
+
+    #translations img {
+        display: none;
+    }
+}
+
+
+@media only print {            
     #book {
         margin-top: 60px;
     }
